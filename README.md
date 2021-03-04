@@ -14,7 +14,7 @@ This document contains the following details:
 ### Description of the Topology
 This repository includes code defining the infrastructure below. 
 
-![](Images/Solved.png)
+![](https://user-images.githubusercontent.com/71580112/109997994-cbe07180-7cde-11eb-939d-1aced4b58d3d.png)
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the "D*mn Vulnerable Web Application"
 
