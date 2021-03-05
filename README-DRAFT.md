@@ -45,8 +45,9 @@ The configuration details of each machine may be found below.
 
 A load balancer with a health probe has been provisioned in front of the 3 DVWA web server VM's.
 
--Avalibility zone 1: JumpBox, Load Balancer, DVWA Web server 1-3
--Avalibility zone 2: ELK Server
+  -Avalibility zone 1: JumpBox, Load Balancer, DVWA Web server 1-3
+  
+  -Avalibility zone 2: ELK Server
 
 
 
