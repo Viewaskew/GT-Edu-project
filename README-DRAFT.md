@@ -72,14 +72,15 @@ The web servers can accept HTTP traffic through the load balancer but have no pu
 
 ## ELK Server Configuration
 
-It is usually a good practice to update the system before adding new systems and/or software
-updates for the jumpbox can be done using:
-sudo apt update
-sudo apt upgrade
+It is usually a good practice to update the system before adding new systems and/or software:
+
+Updates for the jumpbox can be done using:
+    sudo apt update
+    sudo apt upgrade
 
 or from the ansible or any of the other web server shells 
-'sudo' apt update
-'sudo' apt upgrade
+    'sudo' apt update
+    'sudo' apt upgrade
 
 sudo does not need to be used from "root"
 
