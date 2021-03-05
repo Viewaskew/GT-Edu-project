@@ -127,9 +127,11 @@ In order to use the playbook, the Ansible control node will need to be configure
 
 SSH into the Jump Box:
 
-![](Ansible/playbook login.png)
 
-    -Filebeat
+![](https://github.com/Viewaskew/GT-Edu-project/blob/9cabbf17b7598c8256fb1c1654638f2775e48f53/Ansible/playbook%20login.png)
+
+
+  -Filebeat
   
   #Note that when text is copy and pasted from the web into terminal, formatting differences may occur that will corrupt this configuration file. That chance increase with the size of the file.
 
