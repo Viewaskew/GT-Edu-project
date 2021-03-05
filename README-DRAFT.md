@@ -107,9 +107,13 @@ The following Beats have been installed on these VM's:
 
 In order to use the playbook, an Ansible control node will need to be configured: 
 
-SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+SSH into the Jump Box
+
+  
+  
+
+
+
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
