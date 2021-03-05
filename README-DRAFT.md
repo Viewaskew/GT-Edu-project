@@ -26,6 +26,7 @@ Load balancing ensures that the application will be highly avalable, in addition
 The load balancer ensures that the work to process incoming traffic will be shared across all three vulnerable web servers.  Access controls will ensure that only autherized users can connect to the inter virtual network 
 
 Integrating an ELK server allows Admin to easily monitor the vulnerable VMs for system traffic, logs, metrics and system changes.
+ 
   -Filebeat watches for log files/locations and collect log events.
     
   -Metricbeat records metrics and statistical data from the operating system and from services running on the server.
