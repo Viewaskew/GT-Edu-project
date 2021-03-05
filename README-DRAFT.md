@@ -146,9 +146,9 @@ After downloading the file, the IP Address for the ELk-Server will need to be ad
 the utilization of the short cut "shift" + "control" + "-" will allow quick referenceing of the lines thata need to be modified "1105" and "1805"
 
 
-![](Filebeat/filebeat 1105.png)
+![](https://github.com/Viewaskew/GT-Edu-project/blob/76f8d86e570773f2befe7f6ae4ef7f7466d3ec81/Filebeat/filebeat%201105.png)
 
-![](Filebeat/filebeat 1805.png)
+![](https://github.com/Viewaskew/GT-Edu-project/blob/76f8d86e570773f2befe7f6ae4ef7f7466d3ec81/Filebeat/filebeat%201805.png)
 
 When the configuration files for filebeat has been installed and modified with the correct address the playbook file can then be saved in the /etc/ansible directory as seen in the first image in this section.
 
@@ -166,20 +166,21 @@ The playbook can be RUN from the /etc/ansible directory or with absolute path
 
 After installing the configuration file, it will need to be modified with the IP address of the ELK-server also
 
-![](Metricbeat/metribeat ip 1.png)
+![](https://github.com/Viewaskew/GT-Edu-project/blob/76f8d86e570773f2befe7f6ae4ef7f7466d3ec81/Metricbeat/metribeat%20ip%201.png)
 
-![](Metricbeat/metribeat ip 2.png)
+![](https://github.com/Viewaskew/GT-Edu-project/blob/76f8d86e570773f2befe7f6ae4ef7f7466d3ec81/Metricbeat/metribeat%20ip%202.png)
 
 When the configuration files for metricbeat has been installed and modified with the correct address the playbook file can then be saved in the /etc/ansible directory as seen in the first image in this section.
 
 [metricbeat-playbook.yml](Metricbeat/metricbeat-playbook.yml)
 
 The playbook can be RUN from the /etc/ansible directory or with absolute path
+  
   - "ansible-playbook metricbeat-playbook.yml"
 
 
 
-- Run the playbook, and navigate to  http://168.61.178.12:5601/app/kibanato check that the installation worked as expected.
+- Run the playbook, and navigate to  http://168.61.178.12:5601/app/kibana to check that the installation worked as expected.
 
 
 
