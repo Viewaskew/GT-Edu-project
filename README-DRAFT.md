@@ -69,6 +69,17 @@ The web servers can accept HTTP traffic through the load balancer but have no pu
 
 ## ELK Server Configuration
 
+It is usually a good practice to update the system before adding new systems and/or software
+updates for the jumpbox can be done using:
+sudo apt update
+sudo apt upgrade
+
+or from the ansible or any of the other web server shells 
+'sudo' apt update
+'sudo' apt upgrade
+
+sudo does not need to be used from "root"
+
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, The advantage of automating the installation process is that multiple server deployments can be accomplished easily and quickly without having to physically touch each server.
 
 The ELK VM exposes an Elastic Stack instance. **Docker** is used to download and manage an ELK container.
@@ -105,20 +116,62 @@ The following Beats have been installed on these VM's:
 
 ### Using the Playbook
 
-In order to use the playbook, an Ansible control node will need to be configured: 
+In order to use the playbook, the Ansible control node will need to be configured: 
 
-SSH into the Jump Box
+SSH into the Jump Box:
 
+![](Ansible/playbook login.png)
+
+    -Filebeat
+  
+  #Note that when text is copy and pasted from the web into terminal, formatting differences may occur that will corrupt this configuration file. That chance increase with the size of the file.
+
+
+Using curl is a better way to avoid errors and we have the file hosted for public download
+
+Run: mkdir /etc/ansible/files && curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/files/filebeat-config.yml
+
+[filebeat-configuration.yml](Filebeat/filebeat-config.yml)
+
+After downloading the file, the IP Address for the ELk-Server will need to be added to the configuration in 2 places
+the utilization of the short cut "shift" + "control" + "-" will allow quick referenceing of the lines thata need to be modified "1105" and "1805"
+
+
+![](Filebeat/filebeat 1105.png)
+
+![](Filebeat/filebeat 1805.png)
+
+When the configuration files for filebeat has been installed and modified with the correct address the playbook file can then be saved in the /etc/ansible directory as seen in the first image in this section.
+
+[filebeat-playbook.yml](Filebeat/filebeat-playbook.yml)
+
+The playbook can be RUN from the /etc/ansible directory or with absolute path
+  - "ansible-playbook filebeat-playbook.yml"
+
+
+
+  -Metricbeat
   
   
+[metricbeat-configuration.yml](Metricbeat/metricbeat-config.yml)
+
+After installing the configuration file, it will need to be modified with the IP address of the ELK-server also
+
+![](Metricbeat/metribeat ip 1.png)
+
+![](Metricbeat/metribeat ip 2.png)
+
+When the configuration files for metricbeat has been installed and modified with the correct address the playbook file can then be saved in the /etc/ansible directory as seen in the first image in this section.
+
+[metricbeat-playbook.yml](Metricbeat/metricbeat-playbook.yml)
+
+The playbook can be RUN from the /etc/ansible directory or with absolute path
+  - "ansible-playbook metricbeat-playbook.yml"
 
 
 
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Run the playbook, and navigate to  http://168.61.178.12:5601/app/kibanato check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+
