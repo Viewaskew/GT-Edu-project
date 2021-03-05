@@ -91,14 +91,14 @@ The ELK VM exposes an Elastic Stack instance. **Docker** is used to download and
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task.
 
 
-[install-elk](install-elk.yml)
+      [install-elk.yml](install-elk.yml)
 
 This playbook implements the following tasks:
 
-Install Docker.io and pip3
-Increases VM memory
-Download and Configure elk docker container
-Sets Published Ports
+  -Install Docker.io and pip3
+  -Increases VM memory
+  -Download and Configure elk docker container
+  -Sets Published Ports
 
 ### Target Machines & Beats
 
