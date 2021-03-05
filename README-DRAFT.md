@@ -73,9 +73,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The ELK VM exposes an Elastic Stack instance. **Docker** is used to download and manage an ELK container.
 
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task.
-[Link text](myMDfile)
-![install-elk.yml](install-elk.yml)
-![](https://github.com/Viewaskew/GT-Edu-project/blob/09e6940ec84b983e3836a34254a4dde545123fc1/install-elk.yml)
+
+[install-elk.yml]
+
 
 The playbook implements the following tasks:
 
