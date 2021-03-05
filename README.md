@@ -74,8 +74,7 @@ The ELK VM exposes an Elastic Stack instance. **Docker** is used to download and
 
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task.
 
-install-elk.yml
-
+https://github.com/Viewaskew/GT-Edu-project/blob/cae20ba3b95d0b2bffd02df03035d30c0126e296/install-elk.yml
 The playbook implements the following tasks:
 
 Install Docker.io and pip3
