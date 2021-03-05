@@ -95,8 +95,26 @@ This ELK server is configured to monitor the following machines:
 | Web2 Server | DVWA     | 10.0.0.11  |
 | Web3 Server | DVWA     | 10.0.0.12  |
 
-We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
 
-These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+The following Beats have been installed on these VM's:
+  
+  -Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on a server, Filebeat monitors the log files or locations specified and collects log events
+  
+  -Metricbeat is a lightweight shipper that can be install on a server to collect metrics from the operating system and from services running on the server.
+
+
+### Using the Playbook
+
+In order to use the playbook, an Ansible control node will need to be configured: 
+
+SSH into the control node and follow the steps below:
+- Copy the _____ file to _____.
+- Update the _____ file to include...
+- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+
+_TODO: Answer the following questions to fill in the blanks:_
+- _Which file is the playbook? Where do you copy it?_
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- _Which URL do you navigate to in order to check that the ELK server is running?
+
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
