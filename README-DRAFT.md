@@ -2,11 +2,12 @@
 ELK-Stack in Azure
 
 # Automated ELK Stack Deployment
+
 The files in this repository were used to configure the network depicted below.
 
 ![](https://user-images.githubusercontent.com/71580112/109997994-cbe07180-7cde-11eb-939d-1aced4b58d3d.png)
 
-
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the file may be used to install only certain pieces of it.
 
 
 This document contains the following details:
@@ -25,9 +26,9 @@ Load balancing ensures that the application will be highly avalable, in addition
 The load balancer ensures that the work to process incoming traffic will be shared across all three vulnerable web servers.  Access controls will ensure that only autherized users can connect to the inter virtual network 
 
 Integrating an ELK server allows Admin to easily monitor the vulnerable VMs for system traffic, logs, metrics and system changes.
-    -Filebeat watches for log files/locations and collect log events. (Filebeat: Lightweight Log Analysis & Elasticsearch)
+  -Filebeat watches for log files/locations and collect log events.
     
-    -Metricbeat records metrics and statistical data from the operating system and from services running on the server (Metricbeat: Lightweight Shipper for Metrics)
+  -Metricbeat records metrics and statistical data from the operating system and from services running on the server.
 
 The configuration details of each machine may be found below.
 
@@ -74,13 +75,28 @@ The ELK VM exposes an Elastic Stack instance. **Docker** is used to download and
 
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task.
 
+
 [install-elk](install-elk.yml)
 
-
-The playbook implements the following tasks:
+This playbook implements the following tasks:
 
 Install Docker.io and pip3
 Increases VM memory
 Download and Configure elk docker container
 Sets Published Ports
-  
+
+### Target Machines & Beats
+
+This ELK server is configured to monitor the following machines:
+
+| VM Machine  | Function | private IP |
+|-------------|----------|------------|
+| Web1 Server | DVWA     | 10.0.0.10  |
+| Web2 Server | DVWA     | 10.0.0.11  |
+| Web3 Server | DVWA     | 10.0.0.12  |
+
+We have installed the following Beats on these machines:
+- _TODO: Specify which Beats you successfully installed_
+
+These Beats allow us to collect the following information from each machine:
+- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
